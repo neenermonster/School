@@ -12,6 +12,8 @@ using namespace std;
 
 int main() {
 
+cout << fixed << showpoint << setprecision(2);
+        //to set how many digits places in a float use this
 
   return 0;
 }
