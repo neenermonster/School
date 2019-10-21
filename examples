@@ -1,0 +1,17 @@
+#include <iostream>
+        // Goes into every page for now. 
+        //This is a regular template for how most functions will be structured
+
+        //#include <iomanip>
+          //I use this a lot for setting precision within my floats
+
+        //#include <cmath>
+          // For using power to a variable, square rooting something
+        
+using namespace std;
+
+int main() {
+
+
+  return 0;
+}
