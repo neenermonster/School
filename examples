@@ -7,6 +7,9 @@
 
         //#include <cmath>
           // For using power to a variable, square rooting something
+          
+        //#include <string>
+          // Good for any string activity
         
 using namespace std;
 
