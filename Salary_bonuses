@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    
+    double monthlySalary, baseSalary;
+    double yearsOfService, bonus;
+    double totalSales, bonusTwo;
+    
+    cout << fixed << showpoint << setprecision(2);
+    cout << "Please enter your monthly salary: ";
+    cin >> baseSalary;
+    monthlySalary = baseSalary; 
+    cout << monthlySalary; cout << endl;
+    
+    cout << "Please enter your years of service with the company: ";
+    cin >> yearsOfService;
+    
+    if (yearsOfService <= 5)
+        bonus = 10 * yearsOfService;
+    else
+        bonus = 20 * yearsOfService;
+    cout << bonus; cout << endl;
+    
+    cout << "Now enter your sales for the month: ";
+    cin >> totalSales;
+    
+    if ((totalSales >= 5000) && (totalSales < 10000))
+        bonusTwo = totalSales * .03;
+    else
+        bonusTwo = totalSales * .06;
+    cout << bonusTwo; cout << endl;
+    
+    cout << "Your paycheck for the month is ";
+    cout << monthlySalary + bonus + bonusTwo;
+       return 0;
+}
