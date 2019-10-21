@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main() {    
+    
+    double sideOne, sideTwo, sideThree;                           //these are the variables I use to get the triangle side lengths
+    
+    string right, left;                                           //String variables for what my outputs could possibly be
+    right = "It is a right angled triangle";
+    left = "It is not a right angled triangle";
+    
+    cout << "Please enter the three sides of the triangle: ";     //user input for the side lengths into my variables
+    cin >> sideOne >> sideTwo >> sideThree;
+    
+    sideOne *= sideOne;                                           // quick maths for pythagoras theory use
+    sideTwo *= sideTwo;
+    sideThree *= sideThree;
+    
+    if (sideOne == sideTwo + sideThree)                          // if statements checking for if the sides of the
+        cout << right;                                           // input triangle make up a right triangle
+    else if 
+        (sideTwo == sideOne + sideThree)
+        cout << right;
+    else if
+        (sideThree == sideOne + sideTwo)
+        cout << right;
+    else
+        cout << left;
+     
+    
+    return 0;
+}
