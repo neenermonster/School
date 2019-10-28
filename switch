@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int num;
+    double diagonal;
+    double lcdX;
+    double tvX;
+    
+    const int a = 16;
+    const int b = 9;
+    
+    const int c = 4;
+    const int d = 3;
+    
+    cout << fixed << showpoint << setprecision(2);
+    
+    cout << "Enter the length of the diagonal of the screen: "; cout << endl;
+    cin>> diagonal;
+    
+    cout << "Enter an integer between 1 and 3: "; cout << endl;
+    cin >> num;
+    
+    lcdX = diagonal / sqrt((a*a) + (b*b));
+    tvX = diagonal / sqrt((c*c) + (d*d));
+    
+    switch(num)
+    {
+        case 1:
+            cout << "The screen length is "; cout << tvX * c; cout << endl;
+            cout << "The screen width is "; cout << tvX * d; cout << endl;
+            cout << "The screen area is "; cout << ((tvX*c)*(tvX*d));
+        case 2:
+            cout << "The screen length is "; cout << lcdX * b; cout << endl;
+            cout << "The screen width is "; cout << lcdX * a; cout << endl;
+            cout << "The screen area is "; cout << ((lcdX*a)*(lcdX*b));
+        case 3:
+            cout << "The screen length is "; cout << tvX * d; cout << endl;
+            cout << "The screen width is "; cout << tvX * c; cout << endl;
+            cout << "The screen area is "; cout << ((tvX*c)*(tvX*d));
+            
+            cout << "The screen length is "; cout << lcdX * b; cout << endl;
+            cout << "The screen width is "; cout << lcdX * a; cout << endl;
+            cout << "The screen area is "; cout << ((lcdX*a)*(lcdX*b));
+            break;
+        default:
+            cout << "That was not a option.";
+    }
+    
+    return 0;
