@@ -1,0 +1,79 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double costOfRoom;
+    double salesTax;
+    double totalCost;
+
+    int numberOfRooms;
+    int daysBooked;
+    
+    const double discountOne = 0.10;
+    const double discountTwo = 0.20;
+    const double discountThree = 0.30;
+    const double dayDiscount = 0.05;
+    
+    double discount = 1.0;
+    
+    cout << fixed << showpoint << setprecision(2);
+    
+    cout << "Please enter the cost of renting one room: ";
+    cin >> costOfRoom;
+    
+    cout << "Enter the number of rooms booked: ";
+    cin >> numberOfRooms;
+    
+    cout << "Enter the number of days the rooms are booked: ";
+    cin >> daysBooked;
+    
+    cout << "Enter the salesTax: ";
+    cin >> salesTax;
+    salesTax /= 100;
+    
+    // To find the discount for each room after finding rooms booked and for how long
+    if (numberOfRooms >= 30)
+        discount -= discountThree;
+    else if (numberOfRooms >= 20)
+        discount -= discountTwo;
+    else if (numberOfRooms >= 10)
+        discount -= discountOne;
+    
+    // checking days booked
+    if (daysBooked >= 3)
+        discount -= dayDiscount;
+    
+    totalCost = daysBooked * ((costOfRoom * (discount)) * numberOfRooms);
+    
+    //The cost of renting one room
+    cout << "The cost of the room is ";
+    cout << costOfRoom; cout << endl;
+    
+    //The discount on each room as a percent
+    cout << "The discount on each room is ";
+    cout << (1 - discount) * 100;
+    cout << " percent."; cout << endl;
+    
+    //The number of rooms booked
+    cout << "The number of rooms booked is ";
+    cout << numberOfRooms; cout << endl;
+    //The number of days the rooms are booked
+    cout << "The number of days booked is "; cout << daysBooked;
+    cout << endl;
+    
+    //The total cost of the rooms
+    cout << "The total cost of the rooms is ";
+    cout << totalCost; cout << endl;
+    
+    //The sales tax
+    cout << "The sales tax will be ";
+    cout << totalCost * salesTax; cout << endl;
+    
+    //The total billing amount.
+    cout << "The total billing amount will be ";
+    cout << totalCost * (1 + salesTax); cout << endl;
+    
+    return 0;
+}
