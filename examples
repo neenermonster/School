@@ -14,9 +14,18 @@
 using namespace std;
 
 int main() {
-
+````````````````````````````````````````````````````````````
 cout << fixed << showpoint << setprecision(2);
         //to set how many digits places in a float use this
+````````````````````````````````````````````````````````````        
+        do
+        {
+           sum = sum + num % 10;               
+           num = num / 10;
+        }
+        while (num > 0);
+        
+````````````````````````````````````````````````````````````        
 
   return 0;
 }
