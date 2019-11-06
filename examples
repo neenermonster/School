@@ -17,7 +17,8 @@ int main() {
 ````````````````````````````````````````````````````````````
 cout << fixed << showpoint << setprecision(2);
         //to set how many digits places in a float use this
-```````int sum = 0;`````````````````````````````````````````````````````        
+````````````````````````````````````````````````````````````
+        int sum = 0;
         do
         {
            sum = sum + num % 10;               
@@ -25,7 +26,14 @@ cout << fixed << showpoint << setprecision(2);
         }
         while (num > 0);
         
-````````````````````````````````````````````````````````````        
+````````````````````````````````````````````````````````````   
+        while (numberCounter <= NUM_LOOPS)
+   {
+       cout << head1 << numberCounter << endl << head2 << numberCounter * byTwo << endl;
+       cout << head3 << numberCounter * byTen << endl << endl;
+       numberCounter++;
+   }
+````````````````````````````````````````````````````````````
 
   return 0;
 }
