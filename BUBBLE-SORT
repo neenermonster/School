@@ -11,8 +11,8 @@ for (a = 1; a < SIZE; a++)
      if (list[b] > list [b+1])
       { 
         temp = list [b];
-        list[b+1] = list[b];
-        list[b]=temp;
+        list[b] = list[b+1];
+        list[b+1]=temp;
        }
  return(0);
 }
