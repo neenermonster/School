@@ -35,6 +35,14 @@ cout << fixed << showpoint << setprecision(2);
    }
    
 ````````````````````````````````````````````````````````````
+do { cout << head1 << numberCounter << endl
+       << head2 << numberCounter * byTwo << endl
+       << head3 << numberCounter * byTen << endl << endl;
+       numberCounter++;
+   }
+    while (numberCounter <= NUM_LOOPS);
+    
+````````````````````````````````````````````````````````````   
 
 for (numberCounter = 0; numberCounter <= NUM_LOOPS; numberCounter++)
    {
