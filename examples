@@ -34,6 +34,13 @@ cout << fixed << showpoint << setprecision(2);
        numberCounter++;
    }
 ````````````````````````````````````````````````````````````
+ while (numStars != -1) 
+   { 
+       totalStars += numStars;
+       cout << "Enter rating for featured movie: ";
+       cin >> numStars;
+   }
+````````````````````````````````````````````````````````````
 
   return 0;
 }
