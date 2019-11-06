@@ -33,14 +33,29 @@ cout << fixed << showpoint << setprecision(2);
        cout << head3 << numberCounter * byTen << endl << endl;
        numberCounter++;
    }
+   
 ````````````````````````````````````````````````````````````
+
+for (numberCounter = 0; numberCounter <= NUM_LOOPS; numberCounter++)
+   {
+       cout << head1 << numberCounter << endl 
+       << head2 << numberCounter*byTwo 
+       << endl << head3 << numberCounter*byTen << endl << endl;
+    numberCounter++;
+    }
+    
+ ```````````````````````````````````````````````````````````
+ 
  while (numStars != -1) 
    { 
        totalStars += numStars;
        cout << "Enter rating for featured movie: ";
        cin >> numStars;
    }
+   
 ````````````````````````````````````````````````````````````
+
+
 
   return 0;
 }
