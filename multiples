@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Write your main here
+    int first = 0;
+    int second = 0;
+    int calc = 0;
+    
+    cin >> first;
+    cin >> second;
+    
+    if ( first > second)
+    calc = (first+1) - second;
+    else 
+        calc = (second+1) - first;
+    
+    cout << calc / 3 << endl;
+    cout << calc / 5;
+        
+   
+    
+    return 0;
+}
