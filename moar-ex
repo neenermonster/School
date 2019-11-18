@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Write your main here
+    int firstNum, secondNum;
+    int temp, c;
+    int a = 0;
+    int b = 0;
+    char f;
+        
+    cout << "Enter two numbers: ";
+    cin >> firstNum >> secondNum;
+    
+    do
+    {
+        temp = firstNum;
+        firstNum = secondNum;
+        secondNum = temp;
+    }
+    while (secondNum < firstNum);
+    cout << firstNum << " is the smaller number." << endl;
+    
+    temp = 0;
+    for (a = firstNum; a <= secondNum; a++)
+    {
+        if (a%2 != 0)
+        {
+            cout << a << ' ';
+            b += a*a;
+        }
+        else 
+            temp += a;
+    }
+    cout << endl << temp << endl;
+           
+    cout << b;
+    
+    for (c = 1; c < 11; c++)
+    {
+        cout << c << ' ' << c*c << ' ';
+    }
+    cout << endl; 
+    
+    for(f = 'A'; f <= 'Z'; ++f)
+        cout << (f)<< ' ';
+    return 0;
+}
