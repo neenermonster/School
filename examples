@@ -10,6 +10,8 @@
           
         //#include <string>
           // Good for any string activity
+        //#include <fstream>
+          // For file use.
         
 using namespace std;
 
@@ -17,6 +19,16 @@ int main() {
 ````````````````````````````````````````````````````````````
 cout << fixed << showpoint << setprecision(2);
         //to set how many digits places in a float use this
+````````````````````````````````````````````````````````````
+//files 
+        ofstream myfile; // To declare you're writing to that file I think
+        ifstream myfile; // To read from the file
+        fstream myfile; // to read and write from the file.
+        
+        myfile.open ("File Name"); //tells it which file it is or to create a new one. 
+        myfile << "This writes to the files. \n";
+        myfile.close(); // closes the file
+        
 ````````````````````````````````````````````````````````````
         int sum = 0;
         do
