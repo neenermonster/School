@@ -1,0 +1,29 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+int main()
+{
+
+int counter, sum, num;
+
+ifstream infile;
+infile.open ("Exp_5_24.txt");
+
+counter = 0;
+infile >> num;
+while (infile)
+{
+    sum = 0;
+    while (num != -999)
+        {
+        sum = sum + num;
+        infile >> num;
+    }
+    counter++;
+    cout << "Line " << counter
+         << ": Sum = " << sum << endl;
+    infile >> num;
+}
+    
+}
