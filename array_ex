@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int determineRateCharge(int);
+
+int main() 
+{
+   // Declare two dimensional array here
+   double centerArray[5][5]={{30, 60, 88, 115,140},{26, 52, 70, 96, 120},{24, 46, 67, 89, 110},{22, 40, 60, 75, 88},{20, 35, 50, 66, 84}};  // initializing 
+   // Declare other variables
+   int numDays;   
+   int age;
+   int QUIT = 99;
+				
+   // This is the work done in the getReady() function
+   // Perform a priming read to get the age of the child
+   cout << "Enter the age of the child: " << endl;
+   cin >> age;
+		
+   while(age != QUIT)
+   {	
+      // This is the work done in the determineRateCharge() function
+      // Ask the user to enter the number of days
+      numDays = determineRateCharge(age);
+
+      // Print the weekly rate
+      cout << centerArray[age][numDays-1] << endl;
+      // Ask the user to enter the next child's age
+      cout << "Enter another child's age" << endl;
+      cin >> age;
+   }
+   // This is the work done in the finish() function
+   cout << "End of program" << endl;
+
+   return 0;
+} // End of main() function
+
+int determineRateCharge ( int age)
+{
+    int x;
+    cout << "Enter the number of days: ";
+    cin >> x;
+    return x;
+}
